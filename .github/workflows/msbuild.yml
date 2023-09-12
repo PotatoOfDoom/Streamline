@@ -42,7 +42,7 @@ jobs:
 
     - name: Setup
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: .\setup.bat
+      run: .\setup.bat vs2022
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
