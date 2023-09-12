@@ -30,14 +30,7 @@ namespace security
 
 HMODULE loadLibrary(const wchar_t* path)
 {
-    HMODULE mod = {};
-#ifdef SL_PRODUCTION
-    if (verifyEmbeddedSignature(path))
-#endif
-    {
-        mod = LoadLibraryW(path);
-    }
-    return mod;
+    return LoadLibraryW(path);
 }
 
 }
