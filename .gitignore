@@ -17,3 +17,5 @@ external/pix/**
 external/reflex-sdk-vk/**
 external/slang/**
 external/vulkan/**
+external/ffx-sdk/**
+external/xess/**
