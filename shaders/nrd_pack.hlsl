@@ -64,7 +64,7 @@ void main( uint3 DTid : SV_DispatchThreadID)
     }
 
     uint2 sourcePixelId = pixelId;
-    if (enableCheckerboard)
+    if ((bool)enableCheckerboard)
     {
         if (pixelId.x > uint(sizeAndInvSize.x / 2))
             return;
@@ -76,7 +76,7 @@ void main( uint3 DTid : SV_DispatchThreadID)
     float4 normalRoughness = inNormalRoughness[sourcePixelId].w;
 
     // Pack diffuse signal
-    if (encodeDiffuseRadianceHitDist)
+    if ((bool)encodeDiffuseRadianceHitDist)
     {
         float4 diffuse = inDiffuseRadianceHitDist[pixelId];
         float4 packedRadiance = diffuse;
